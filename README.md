@@ -2,6 +2,8 @@
 
 Generador de PDFs con las FAQs y erratas oficiales del juego de miniaturas SAGA.
 
+Las traducciones se han realizado con ayuda de [Asistente de Traducción FAQs SAGA](https://chatgpt.com/g/g-696cbef637448191980d4fca4a8d698d-asistente-de-traduccion-faqs-saga).
+
 ## Contenido
 
 - **La Edad de Aníbal** (2025)
