@@ -1,0 +1,88 @@
+/* Dos columnas automáticas (wkhtmltopdf-friendly) */
+
+
+.auto-columns {
+  -webkit-column-count: 2;
+  column-count: 2;
+
+  -webkit-column-gap: 10mm;
+  column-gap: 10mm;
+
+  -webkit-column-fill: auto;
+  column-fill: auto;
+}
+section.auto-columns {
+  max-width: none !important;
+  width: 100%;
+  margin: 0;
+}
+
+/* Evitar cortes feos dentro de columnas */
+.auto-columns p,
+.auto-columns ul,
+.auto-columns ol,
+.auto-columns blockquote {
+  -webkit-column-break-inside: avoid;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+/* Títulos: evitar que queden al final de columna/página */
+.auto-columns h1,
+.auto-columns h2,
+.auto-columns h3,
+.auto-columns h4 {
+  -webkit-column-break-after: avoid;
+  break-after: avoid;
+  page-break-after: avoid;
+
+  -webkit-column-break-inside: avoid;
+  break-inside: avoid;
+  page-break-inside: avoid;
+
+  /* Un poco de aire para legibilidad */
+  margin: 0.6em 0 0.25em;
+}
+
+/* Evitar “título + línea suelta” */
+.auto-columns h2 + p,
+.auto-columns h3 + p,
+.auto-columns h4 + p {
+  -webkit-column-break-inside: avoid;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+/* Texto base */
+body {
+  font-size: 9pt;
+  line-height: 1.3;
+  margin: 0; /* deja los márgenes al motor PDF */
+}
+
+/* Asegura que en impresión se mantiene igual */
+@media print {
+  .auto-columns {
+    -webkit-column-count: 2;
+    column-count: 2;
+
+    -webkit-column-gap: 10mm;
+    column-gap: 10mm;
+
+    -webkit-column-fill: auto;
+    column-fill: auto;
+  }
+}
+.rule-dice {
+  border-left: 6px solid #8b1e1e;
+  background: #f8eaea;
+  padding: 10px;
+  margin: 1em 0;
+}
+
+.rule-activation {
+  border-left: 6px solid #1e4f8b;
+  background: #eaf0f8;
+  padding: 10px;
+  margin: 1em 0;
+}
